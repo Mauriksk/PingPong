@@ -58,13 +58,16 @@ const crearCirculo = (x, y, r, color) => {
     context.fill();
 }
 
-// Agregar evento del mouse al canvas
-canvas.addEventListener("mousemove", posicionMouse);
 
 const posicionMouse = (e) => {
     let rect = canvas.getBoundingClientRect();
     jugadorHumano.y = e.clientY - rect.top - jugadorHumano.height/2;
 }
+
+// Agregar evento del mouse al canvas
+canvas.addEventListener("mousemove", posicionMouse);
+
+
 
 // Estado inicial de la pelota al comenzar de nuevo el tanto
 const resetBall = () => {
