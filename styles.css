@@ -1,5 +1,5 @@
 body{
-    background-color: dimgray;
+    background-color: black;
 }
 #pong{
     border: 2px solid #FFF;
@@ -9,4 +9,9 @@ body{
     right:0;
     left:0;
     bottom:0;
+}
+h1{
+    text-align: center;
+    color: aliceblue;
+    font-size: 4.5rem;
 }

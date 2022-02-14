@@ -11,7 +11,7 @@ const pelota = {
     velocidadEnX : 5,
     velocidadEnY : 5,
     speed : 7,
-    color : "WHITE"
+    color : "BLACK"
 }
 
 // Paleta del jugador Humano, la x, e y son para posicionar la paleta en el canvas
@@ -21,7 +21,7 @@ const jugadorHumano = {
     width : 10,
     height : 100,
     score : 0,
-    color : "WHITE"
+    color : "BLACK"
 }
 
 // Jugador automatico
@@ -31,7 +31,7 @@ const jugadorBot = {
     width : 10,
     height : 100,
     score : 0,
-    color : "WHITE"
+    color : "BLACK"
 }
 
 // Red del medio de la cancha
@@ -40,7 +40,7 @@ const red = {
     y : 0,
     height : 10,
     width : 2,
-    color : "WHITE"
+    color : "BLACK"
 }
 
 // Crea un cuadrado canvas 
@@ -86,8 +86,8 @@ const crearRed = () => {
 
 // Crear texto
 const crearTexto = ( text, x, y ) => {
-    context.fillStyle = "#FFF";
-    context.font = "75px fantasy";
+    context.fillStyle = "#000";
+    context.font = "60px fantasy";
     context.fillText(text, x, y);
 }
 
@@ -148,7 +148,7 @@ const actualizarScore = () =>{
 
 // Esta funcion ejecuta todas las creaciones de objetos canvas
 const render = () => {
-    crearReactangulo(0, 0, canvas.width, canvas.height, "#000");
+    crearReactangulo(0, 0, canvas.width, canvas.height, "#fff");
     crearTexto(jugadorHumano.score,canvas.width/4,canvas.height/5);
     crearTexto(jugadorBot.score,3*canvas.width/4,canvas.height/5);
     crearRed();
